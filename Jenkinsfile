@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'echo "Building Hello World!"'
+                    sh 'chmod +x helloworld'
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'echo "Testing Hello World!"'
+                    sh './helloworld'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'echo "Deploying Hello World!"'
+                    echo 'Deployed)'
                 }
             }
         }
